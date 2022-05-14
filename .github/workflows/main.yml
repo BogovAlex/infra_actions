@@ -3,6 +3,9 @@ name: Django-app workflow
 
 on: [push]
 
+env:
+  SECRET_KEY: ${{ secrets.SECRET_KEY }}   
+
 jobs:
   tests:
     # «Раннер» — создание изолированного окружения с последней версией Ubuntu 
